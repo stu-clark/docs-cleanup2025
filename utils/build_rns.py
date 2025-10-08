@@ -418,9 +418,9 @@ def build_rn_markdown_files(product, version_list):
 
     for version in version_list:
     #### Examples of skipping versions for RN processing - list of EOL_VERSIONS regardless of product, or individual version numbers:
-        EOL_VERSIONS = [ "2.4.0", "2.4.1", "3.0.0", "3.1.0", "3.2.0", "3.2.1", "3.3.0", "3.3.1" ]
-        if version in EOL_VERSIONS:
-            continue
+        #EOL_VERSIONS = [ "2.4.0", "2.4.1", "3.0.0", "3.1.0", "3.2.0", "3.2.1", "3.3.0", "3.3.1" ]
+        #if version in EOL_VERSIONS:
+        #    continue
     #   if version == "4.6.0":
     #       continue
     #    if version == "4.12.0":
@@ -448,6 +448,9 @@ def build_rn_markdown_files(product, version_list):
         # Loop over all the maintenance releases.
         for version in major_minor[major]:
             if version == "4.1.2":
+                continue
+            EOL_VERSIONS = [ "2.4.0", "2.4.1", "3.0.0", "3.1.0", "3.2.0", "3.2.1", "3.3.0", "3.3.1" ]
+            if version in EOL_VERSIONS:
                 continue
             print("Building markdown for {} {}\n".format(product_string(product), version))
             version_output.append("## {} Release Notes\n".format(version))

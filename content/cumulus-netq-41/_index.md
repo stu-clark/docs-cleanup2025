@@ -1,12 +1,12 @@
 ---
-title: NVIDIA Cumulus NetQ 4.0 User Guide
+title: NVIDIA Cumulus NetQ 4.1 User Guide
 author: NVIDIA
 weight: 1
 subsection: true
 toc: 1
 cascade:
     product: Cumulus NetQ
-    version: "4.0"
+    version: "4.1"
     imgData: cumulus-netq
     siteSlug: cumulus-netq
     old: true
